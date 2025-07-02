@@ -6,6 +6,6 @@ files:
 
 hooks:
   AfterInstall:
-    - location: scripts/dep.sh
+    - location: dep.sh
       timeout: 180
       runas: ec2-user
