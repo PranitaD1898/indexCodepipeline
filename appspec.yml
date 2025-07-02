@@ -1,11 +1,11 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /var/www/html
+  - source: index.html
+    destination: /home/ec2-user/html
+
 hooks:
-  BeforeInstall:
-    - location: dep.sh
-      timeout: 300
-      runas: root
-  
+  AfterInstall:
+    - location: scripts/dep.sh
+      timeout: 180
+      runas: ec2-user
